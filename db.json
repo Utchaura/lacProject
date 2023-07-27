@@ -1,0 +1,147 @@
+{
+  "user": [
+    {
+      "id": "admin",
+      "name": "NT Infotech",
+      "password": "Test$1234",
+      "email": "test@gmail.com",
+      "role": "admin",
+      "isactive": true
+    },
+    {
+      "id": "testuser",
+      "name": "Test User",
+      "password": "Test@1234",
+      "email": "test@in.com",
+      "role": "user",
+      "isactive": true
+    },
+    {
+      "id": "Jhon1",
+      "name": "NT Infotech",
+      "password": "Test@1233",
+      "email": "te@in.com",
+      "role": "tech",
+      "isactive": true
+    },
+    {
+      "id": "ntuser",
+      "name": "ramesh",
+      "password": "Test@1234",
+      "email": "te@in.com",
+      "role": "tech",
+      "isactive": true
+    }
+  ],
+  "role": [
+    {
+      "code": "user",
+      "name": "User"
+    },
+    {
+      "code": "tech",
+      "name": "Technician"
+    }
+  ],
+  "menu": [
+    {
+      "code": "user",
+      "name": "User"
+    },
+    {
+      "code": "customer",
+      "name": "Customer"
+    }
+  ],
+  "roleaccess": [
+    {
+      "role": "admin",
+      "menu": "user",
+      "haveedit":true,
+      "haveadd":true,
+      "havedelete":true
+    },
+    {
+      "role": "admin",
+      "menu": "customer",
+      "haveedit":true,
+      "haveadd":true,
+      "havedelete":true
+    },
+    {
+      "role": "user",
+      "menu": "user",
+      "haveedit":false,
+      "haveadd":false,
+      "havedelete":false
+    },
+    {
+      "role": "user",
+      "menu": "customer",
+      "haveedit":true,
+      "haveadd":true,
+      "havedelete":false
+    }
+
+
+  ],
+  "customer":[
+    {
+      "id":1,
+      "name":"rakhesh",
+      "Creditlimit":1000
+    },
+    {
+      "id":2,
+      "name":"rahul",
+      "Creditlimit":1000
+    },
+    {
+      "id":3,
+      "name":"ramesh",
+      "Creditlimit":1000
+    },
+    {
+      "id":4,
+      "name":"rahim",
+      "Creditlimit":1000
+    },
+    {
+      "id":5,
+      "name":"robert",
+      "Creditlimit":1000
+    }
+  ],
+
+    "COLORS": [
+      "maroon", "red", "orange", "yellow", "olive", "green", "purple",
+      "fuchsia", "lime", "teal", "aqua", "blue", "navy", "black", "gray"
+    ],
+    "NAMES": [
+      "Maia", "Asher", "Olivia", "Atticus", "Amelia", "Jack",
+      "Charlotte", "Theodore", "Isla", "Oliver", "Isabella", "Jasper",
+      "Cora", "Levi", "Violet", "Arthur", "Mia", "Thomas", "Elizabeth"
+    ],
+    "LacModel":[
+      {
+      "id": 1,
+      "title":24,
+      "original_amount":6788,
+      "village": "valo",
+      "notification_S4":"huda",
+      "notification_S6":"dar",
+      "award_date":"34-12-2012",
+      "original_amount_of_Lac":7879,
+      "detail":"text details",
+      "khasra":"text kharsa",
+      "receipt_date":"24-01-2023",
+      " application_lac":"sfggfdg",
+      "adj_count_date":"string",
+      "High_Court_RFA_order_No":35333,
+      "filed_by_state":6746433,
+      "date_relied":"23-10-2022",
+      "compensation_paid":"drote"
+    }
+   ]
+
+}

@@ -1,0 +1,78 @@
+/* Add this CSS in a <style> tag or a separate CSS file */
+
+.container {
+  position: relative;
+}
+
+.form-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+   background-image: transparent url("/src/assets/images/img1.jpg") no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+/* Increase font size for "Add New LAC" heading */
+.add-lac-heading {
+  font-size: 28px;
+  font-weight: bold;
+  color: rgb(38, 39, 49); /* Set the color of the heading text to white */
+  text-shadow: 2px 2px 4px rgba(39, 36, 48, 0.5); /* Add a text shadow to the heading */
+}
+
+/* Make the form transparent */
+.card-body {
+  background-color: rgba(255, 255, 255, 0.7); /* Use an rgba color with alpha value (0.7) to make it transparent */
+}
+
+/* Set width and height for input boxes */
+.form-group input {
+  width: 100%;
+  height: 40px;
+  border: 2px solid black;
+  font-weight: bold;
+  padding: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 100%;
+  padding: 13px 22px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #536387;
+  outline: none;
+  resize: none;/* Add margin between input boxes */
+}
+
+/* Add some space between labels and form input boxes */
+.form-group label {
+  margin-bottom: 5px;
+}
+
+/* Make the form responsive */
+@media (max-width: 992px) {
+  .form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

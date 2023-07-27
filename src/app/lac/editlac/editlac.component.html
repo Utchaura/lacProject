@@ -1,0 +1,57 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <!-- Table Columns -->
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef> Id </th>
+    <td mat-cell *matCellDef="let element"> {{ element.id }} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef> Name </th>
+    <td mat-cell *matCellDef="let element">
+      <span *ngIf="element.editable; else nonEditable">
+        <input type="text" [(ngModel)]="element.name" required>
+      </span>
+      <ng-template #nonEditable>{{ element.name }}</ng-template>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="progress">
+    <th mat-header-cell *matHeaderCellDef> Progress </th>
+    <td mat-cell *matCellDef="let element">
+      <span *ngIf="element.editable; else nonEditable">
+        <input type="number" [(ngModel)]="element.progress" required>
+      </span>
+      <ng-template #nonEditable>{{ element.progress }}</ng-template>
+    </td>
+  </ng-container>
+
+  <ng-container matColumnDef="colour">
+    <th mat-header-cell *matHeaderCellDef> Colour </th>
+    <td mat-cell *matCellDef="let element">
+      <span *ngIf="element.editable; else nonEditable">
+        <input type="text" [(ngModel)]="element.colour" required>
+      </span>
+      <ng-template #nonEditable>{{ element.colour }}</ng-template>
+    </td>
+  </ng-container>
+
+  <!-- Edit Button Column -->
+  <ng-container matColumnDef="actions">
+    <th mat-header-cell *matHeaderCellDef> Actions </th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-icon-button *ngIf="!element.editable" (click)="editRow(element)">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-icon-button *ngIf="element.editable" (click)="saveRow(element)">
+        <mat-icon>save</mat-icon>
+      </button>
+      <button mat-icon-button *ngIf="element.editable" (click)="cancelEdit(element)">
+        <mat-icon>cancel</mat-icon>
+      </button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
